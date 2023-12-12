@@ -22,6 +22,13 @@ const corsOptions = {
 
 app.use(cors({ origin: '*' }));
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://167.71.161.26:3000');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 // Replace 'your-database-name' with your actual database name
 const url = "mongodb+srv://harshi:harshi60@cluster0.m7vqojp.mongodb.net/personal-budget";
@@ -172,7 +179,7 @@ app.post("/", async (req, res) => {
 });
 
 
-app.post("/Signup", async (req, res) => {
+app.post("/signup", async (req, res) => {
   const { username, password } = req.body;
   const Password = await encryptPassword(password);
   try {
