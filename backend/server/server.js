@@ -10,12 +10,10 @@ const bodyParser = require("body-parser");
 const SignupSchema = require("./models/SignupModel");
 const BudgetSchema = require("./models/BudgetModel");
 const ExpenseSchema = require("./models/ExpenseModel");
-const cors = require('cors');
 const https = require('https');
 const fs = require('fs');
 
 
-app.use(cors());
 
 
 // Replace 'your-database-name' with your actual database name
