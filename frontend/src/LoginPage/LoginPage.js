@@ -69,7 +69,7 @@ const LoginPage = (props) => {
         throw new Error('Passwords do not match');
       }
 
-      const response = await axios.post('http://localhost:3002/signup', signupFormData);
+      const response = await axios.post('http://localhost:3002/Signup', signupFormData);
 
       setSuccessMessage(response.data.message);
 

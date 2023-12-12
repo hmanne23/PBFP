@@ -10,6 +10,12 @@ const bodyParser = require("body-parser");
 const SignupSchema = require("./models/SignupModel");
 const BudgetSchema = require("./models/BudgetModel");
 const ExpenseSchema = require("./models/ExpenseModel");
+const cors = require('cors');
+const https = require('https');
+const fs = require('fs');
+
+
+app.use(cors());
 
 
 // Replace 'your-database-name' with your actual database name
@@ -161,7 +167,7 @@ app.post("/", async (req, res) => {
 });
 
 
-app.post("/signup", async (req, res) => {
+app.post("/Signup", async (req, res) => {
   const { username, password } = req.body;
   const Password = await encryptPassword(password);
   try {
@@ -240,5 +246,5 @@ app.post("/refresh-token/:userId",async(req,res)=>{
 })
 
 app.listen(port, () => {
-  console.log(`API served at http://localhost:${port}`);
+  console.log(`API served at https://localhost:${port}`);
 });
