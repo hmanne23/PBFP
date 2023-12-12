@@ -13,7 +13,14 @@ const ExpenseSchema = require("./models/ExpenseModel");
 const https = require('https');
 const fs = require('fs');
 
+const corsOptions = {
+  origin: 'http://167.71.161.26:3000', // Allow requests from this origin
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Allow sending cookies and other credentials
+  optionsSuccessStatus: 204, // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 
+app.use(cors(corsOptions));
 
 
 // Replace 'your-database-name' with your actual database name
