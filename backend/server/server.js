@@ -27,7 +27,6 @@ db.once('open', () => {
 const bcrypt = require("bcrypt");
 
 const port = 3002;
-const budget = require("../src/pb.json");
 
 app.use(cors());
 app.use(bodyParser.json());
