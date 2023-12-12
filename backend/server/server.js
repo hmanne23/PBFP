@@ -13,7 +13,7 @@ const ExpenseSchema = require("./models/ExpenseModel");
 
 
 // Replace 'your-database-name' with your actual database name
-const url = 'mongodb://localhost:27017/personal-budget';
+const url = "mongodb+srv://harshi:harshi60@cluster0.m7vqojp.mongodb.net/personal-budget";
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
