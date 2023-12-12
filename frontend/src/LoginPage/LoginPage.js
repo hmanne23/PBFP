@@ -132,6 +132,7 @@ const LoginPage = (props) => {
                         name="password"
                         value={loginFormData.password}
                         onChange={handleLoginInputChange}
+                        autoComplete="current-password" // Updated line
                         className="form-control"
                         required
                       />
