@@ -53,7 +53,7 @@ function Visuals() {
 
     if (selectedMonth) {
       axios
-        .get(`http://167.172.242.243:3002/get-budgets/${userId}?month=${selectedMonth}`, {
+        .get(`http://10.108.0.4:3002/get-budgets/${userId}?month=${selectedMonth}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -83,7 +83,7 @@ function Visuals() {
 
     if (selectedMonth) {
       axios
-        .get(`http://167.172.242.243:3002/get-expenses/${userId}?month=${selectedMonth}`, {
+        .get(`http://10.108.0.4:3002/get-expenses/${userId}?month=${selectedMonth}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

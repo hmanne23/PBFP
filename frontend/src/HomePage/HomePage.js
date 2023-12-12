@@ -24,7 +24,7 @@ function BarChart() {
     const svgRef = useRef();
 
     useEffect(() => {
-        axios.get('http://167.172.242.243:3002/budget')
+        axios.get('http://10.108.0.4:3002/budget')
             .then(response => {
                 const data = response.data.myBudget;
                 const svg = d3.select(svgRef.current);
@@ -92,7 +92,7 @@ function HomePage() {
     const chartRef = useRef(null);
 
     useEffect(() => {
-        axios.get('http://167.172.242.243:3002/budget')
+        axios.get('http://10.108.0.4:3002/budget')
           .then(response => {
             const data = response.data.myBudget;
             console.log('Data:', data);
