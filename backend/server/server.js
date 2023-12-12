@@ -251,5 +251,5 @@ app.post("/refresh-token/:userId",async(req,res)=>{
 })
 
 app.listen(port, () => {
-  console.log(`API served at https://localhost:${port}`);
+  console.log(`API served at https://167.172.242.243:${port}`);
 });
